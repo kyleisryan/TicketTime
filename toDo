@@ -1,0 +1,8 @@
+To Do:
+	- add advanced search collapsable menu
+	- create simple ticket view
+	- add logic to generate open ticket list on page load
+	- add update button
+	- add resolve button
+	- create a editTicket.js file to handle update/resolve events
+	- think of alternative color shemes/css styles
