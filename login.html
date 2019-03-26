@@ -21,7 +21,7 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
-        <form>
+        <form id="dataEntry">
           <div class="form-group">
             <label for="inputEmail">Email</label>
             <input class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter Email">
@@ -58,6 +58,21 @@
     };
     firebase.initializeApp(config);
   </script>
+
+<!--Submit on enter-->
+  <script>
+    // Get the input form
+    var input = document.getElementById("dataEntry");
+    input.addEventListener("keyup", function(event) {
+    // 13 -> enter
+    if (event.keyCode === 13) {
+      // Cancel the default action just in case and click
+      event.preventDefault();
+      document.getElementById("loginButton").click();
+      }
+    });
+  </script>
+
   <script src="js/login.js"></script>
 </body>
 
